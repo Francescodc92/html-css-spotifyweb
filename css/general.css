@@ -56,9 +56,7 @@ header
 main
 -----------*/
 .app-container .song-container main {
-  min-height: calc(
-    100vh - (var(--footer-height) + var(--header-height))
-  ); /*probabilmente da modificare*/
+  height: calc(100vh - var(--footer-height)); /*probabilmente da modificare*/
   overflow-y: auto;
 }
 
