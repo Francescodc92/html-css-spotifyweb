@@ -1,3 +1,85 @@
 @import url(./reset.css);
 @import url(./general.css);
 @import url(./debug.css);
+/*----------
+aside
+-----------*/
+
+/*--- section page container ----*/
+aside #page-container .logo {
+  min-height: var(--header-height);
+  padding-left: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+aside #page-container {
+  margin-bottom: 1.25rem;
+}
+
+aside #page-container > *:not(:first-child) {
+  padding-bottom: 1.25rem;
+  padding-inline: 1.25rem;
+}
+
+/*--- section page container ----*/
+
+aside #playlist {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside #playlist .top {
+  padding-inline: 1.25rem;
+}
+
+aside #playlist .top h2 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+
+aside #playlist .top button#create-playlist {
+  line-height: 1.875rem;
+  vertical-align: middle;
+  margin-block: 0.625rem;
+  text-transform: capitalize;
+}
+
+aside #playlist .top button#create-playlist span {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 1.25rem;
+}
+
+aside #playlist .top .list-container {
+  max-height: 40%;
+  overflow-y: auto;
+}
+
+aside #playlist .top .list-container ul {
+  overflow-y: hidden;
+}
+
+aside #playlist .top .list-container ul li a {
+  padding-block: 0.625rem;
+}
+
+aside #playlist .bottom {
+  padding-inline: 1.25rem;
+}
+
+aside #playlist .bottom a {
+  padding-block: 0.625rem;
+}
+
+aside #playlist .bottom .profile {
+  padding-block: 0.625rem;
+  border-top: 0.0625rem solid #ccc;
+}
+aside #playlist .bottom .profile > * {
+  display: inline-block;
+}

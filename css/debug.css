@@ -6,10 +6,28 @@
   border: 1px solid red;
 }
 
+/*-------section left--------*/
 .debug .app-container aside {
   background-color: grey;
 }
 
+.debug .app-container aside .logo {
+  border: 1px solid blue;
+}
+
+.debug .app-container aside > * {
+  border: 1px solid gold;
+}
+
+.debug aside #playlist .top .list-container {
+  background-color: green;
+}
+
+.debug aside #playlist .top .list-container ul {
+  background-color: aqua;
+}
+
+/*-------section right--------*/
 .debug .app-container .song-container > * {
   border: 1px solid blue;
 }

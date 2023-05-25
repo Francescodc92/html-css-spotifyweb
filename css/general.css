@@ -10,6 +10,20 @@ body {
   background-color: var(--gb-music-section);
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
 /*---------------
 App container
 ---------------- */
@@ -20,6 +34,9 @@ App container
 /*-------aside-------*/
 .app-container aside {
   width: 20%;
+  min-width: 6.25rem;
+  display: flex;
+  flex-direction: column;
 }
 /*-------song container (right section)-------*/
 .app-container .song-container {
