@@ -1,0 +1,52 @@
+:root {
+  --gb-music-section: #141922;
+  --bg-nav: #000000;
+  --bg-controls-section: #282828;
+  --header-height: 5rem;
+  --footer-height: 6.25rem;
+}
+
+body {
+  background-color: var(--gb-music-section);
+}
+
+/*---------------
+App container
+---------------- */
+.app-container {
+  display: flex;
+  max-height: calc(100vh - 6.25rem);
+}
+/*-------aside-------*/
+.app-container aside {
+  width: 20%;
+}
+/*-------song container (right section)-------*/
+.app-container .song-container {
+  flex-grow: 1;
+}
+
+/*------------
+header
+---------------*/
+.app-container .song-container header {
+  height: var(--header-height);
+}
+
+/*----------
+main
+-----------*/
+.app-container .song-container main {
+  min-height: calc(
+    100vh - (var(--footer-height) + var(--header-height))
+  ); /*probabilmente da modificare*/
+  overflow-y: auto;
+}
+
+/*------------
+Footer
+-------------*/
+
+footer {
+  height: var(--footer-height);
+}
