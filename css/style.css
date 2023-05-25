@@ -126,6 +126,35 @@ main header {
 .song-list > * {
   margin-bottom: 1.25rem;
 }
+/*-----------
+Footer
+-----------*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+}
+
+footer.controllers .actual-song,
+footer.controllers .actual-song .song-info,
+footer.controllers .buttons-wrapper-right {
+  display: flex;
+}
+
+footer .player-wrapper > * {
+  text-align: center;
+}
+
+footer.controllers .actual-song .song-info,
+footer.controllers .buttons-wrapper-right:first-child {
+  margin-right: 0.625rem;
+}
+
+footer.controllers .buttons-wrapper-right:last-child .audio-wrapper {
+  margin-left: 0.625rem;
+}
 
 /*-----------
 Responsive
