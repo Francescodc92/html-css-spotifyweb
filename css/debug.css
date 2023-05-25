@@ -44,3 +44,12 @@
   color: blue;
   background-color: aqua;
 }
+
+/*-------card song--------*/
+.debug .my-row {
+  border: 1px solid black;
+}
+
+.debug .my-row .col-1-6 {
+  border: 1px solid green;
+}
