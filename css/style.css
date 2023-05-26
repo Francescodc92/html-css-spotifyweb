@@ -189,16 +189,15 @@ Responsive
     flex-direction: column;
   }
 
-  aside #playlist .top .list-container {
+  aside #playlist .top {
     display: none;
   }
 
-  aside #playlist .top h2 {
-    display: none;
-  }
-
-  aside #playlist .top button#create-playlist span.text-button {
-    display: none;
+  aside #playlist .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
   }
 
   aside #playlist .bottom .profile #profile-name {

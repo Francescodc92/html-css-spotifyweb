@@ -26,16 +26,14 @@ button {
 }
 
 .my-row {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-inline: calc(-1 * (var(--margin-col)));
+  margin-inline: calc(-1 * var(--margin-col));
 }
 
 .col-1-6 {
   width: calc((100% / 6) - (var(--margin-col) * 2));
   margin-inline: var(--margin-col);
-  margin-block: 1.25rem;
 }
 
 /*---------------
@@ -56,12 +54,12 @@ App container
 }
 /*-------song container (right section)-------*/
 .app-container .song-container {
-  flex-grow: 1;
+  width: 100%;
 }
 
-/* .app-container .song-container .song-list .recent {
+.app-container .song-container .song-list .recent {
   overflow-x: hidden;
-} */
+}
 
 /*------------
 header
