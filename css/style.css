@@ -29,17 +29,21 @@ aside #page-container .page a {
 
 aside #page-container .logo {
   height: var(--header-height);
-  display: flex;
-  align-items: center;
   margin-left: 1.25rem;
+}
+
+aside #page-container .logo a {
+  line-height: var(--header-height);
 }
 
 aside #page-container .logo img:not(#small) {
   width: 60%;
-  display: block;
+  max-width: 8.125rem;
+  vertical-align: middle;
 }
 
-aside #page-container .logo img#small {
+aside #page-container .logo img#small,
+aside #page-container .logo a.img-small {
   height: 3.125rem;
   display: none;
 }
@@ -439,10 +443,17 @@ Responsive
     margin-inline: auto;
   }
 
+  aside #page-container .logo a.img-small {
+    height: 100%;
+    display: block;
+    line-height: var(--header-height);
+    text-align: center;
+  }
+
   aside #page-container .logo img#small {
     height: 1.875rem;
-    display: block;
-    margin-inline: auto;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   aside #page-container .page li a .text {
@@ -486,7 +497,7 @@ Responsive
     padding-inline: 0.3125rem;
   }
 
-  aside #page-container .page li.active a {
+  aside #page-container .page li.active {
     padding-inline: calc(0.3125rem - 0.1875rem);
   }
 }
