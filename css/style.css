@@ -6,11 +6,13 @@ aside
 -----------*/
 
 /*--- section page container ----*/
-aside #page-container .logo {
-  min-height: var(--header-height);
-  padding-left: 1.25rem;
-  display: flex;
-  align-items: center;
+.app-container aside {
+  background-color: black;
+  color: #6a6d72;
+}
+
+.app-container aside a {
+  color: #6a6d72;
 }
 
 aside #page-container {
@@ -18,12 +20,54 @@ aside #page-container {
 }
 
 aside #page-container .page:not(:first-child) {
-  padding-inline: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
 aside #page-container .page a {
   line-height: 150%;
+}
+
+aside #page-container .logo {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  margin-left: 1.25rem;
+}
+
+aside #page-container .logo img:not(#small) {
+  width: 60%;
+  display: block;
+}
+
+aside #page-container .logo img#small {
+  height: 3.125rem;
+  display: none;
+}
+
+aside #page-container .page li {
+  line-height: 1.875rem;
+  margin-bottom: 0.625rem;
+  padding-inline: 1.25rem;
+}
+
+aside #page-container .page li a {
+  font-weight: 700;
+  transition: color 200ms ease-in-out;
+}
+
+aside #page-container .page li:hover a {
+  color: #fff;
+}
+
+aside #page-container .page li:hover a img {
+  opacity: 1;
+}
+
+aside #page-container .page li a img {
+  height: 1.875rem;
+  vertical-align: middle;
+  opacity: 0.5;
+  transition: opacity 200ms ease-in-out;
 }
 
 /*--- section page container ----*/
@@ -42,6 +86,7 @@ aside #playlist .top {
 aside #playlist .top h2 {
   text-transform: uppercase;
   font-size: 1.125rem;
+  color: #fff;
 }
 
 aside #playlist .top button#create-playlist {
@@ -49,18 +94,35 @@ aside #playlist .top button#create-playlist {
   vertical-align: middle;
   margin-block: 0.625rem;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 aside #playlist .top button#create-playlist span:not(.text-button) {
   width: 1.875rem;
   height: 1.875rem;
   display: inline-block;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
   font-size: 1.25rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+aside #playlist .top button#create-playlist:hover span.text-button {
+  color: #fff;
+}
+
+aside #playlist .top button#create-playlist:hover span:not(.text-button) {
+  background-color: #fff;
+}
+
+aside #playlist .top button#create-playlist span.text-button {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 0.3125rem;
+  transition: color 200ms ease-in-out;
 }
 
 aside #playlist .top .list-container {
-  height: 30vh;
+  height: 200px;
   max-height: 30vh;
   overflow-y: auto;
 }
@@ -74,6 +136,13 @@ aside #playlist .top .list-container ul li {
 }
 aside #playlist .top .list-container ul li a {
   line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: color 200ms ease-in-out;
+}
+
+aside #playlist .top .list-container ul li:hover a {
+  color: #fff;
 }
 
 aside #playlist .bottom {
@@ -82,11 +151,50 @@ aside #playlist .bottom {
 
 aside #playlist .bottom a {
   padding-block: 0.625rem;
+  display: flex;
+  align-items: center;
+  transition: color 200ms ease-in-out;
+}
+
+aside #playlist .bottom a:hover {
+  color: #fff;
+}
+
+aside #playlist .bottom a img {
+  width: 1.25rem;
+  margin-right: 0.3125rem;
+  opacity: 0.5;
+  transition: opacity 200ms ease-in-out;
+}
+
+aside #playlist .bottom a:hover img {
+  opacity: 1;
 }
 
 aside #playlist .bottom .profile {
   padding-block: 0.625rem;
   border-top: 0.0625rem solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+aside #playlist .bottom .profile .img-wrapper {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.125rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 0.3125rem;
+}
+
+aside #playlist .bottom .profile .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+aside #playlist .bottom .profile h3 {
+  color: #fff;
 }
 aside #playlist .bottom .profile > * {
   display: inline-block;
@@ -187,6 +295,28 @@ Responsive
     min-width: 3.125rem;
     display: flex;
     flex-direction: column;
+  }
+
+  aside #page-container .logo img:not(#small) {
+    display: none;
+  }
+
+  aside #page-container .logo {
+    margin-left: 0;
+  }
+
+  aside #page-container .logo a {
+    margin-inline: auto;
+  }
+
+  aside #page-container .logo img#small {
+    height: 1.875rem;
+    display: block;
+    margin-inline: auto;
+  }
+
+  aside #page-container .page li a .text {
+    display: none;
   }
 
   aside #playlist .top {

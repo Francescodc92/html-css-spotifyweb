@@ -52,6 +52,20 @@ App container
   display: flex;
   flex-direction: column;
 }
+
+aside #page-container .page li a.active {
+  color: #fff;
+}
+
+aside #page-container .page li:has(a.active) {
+  border-left: 0.1875rem solid #adff2f;
+  padding-inline: calc(1.25rem - 0.1875rem);
+}
+
+aside #page-container .page li a.active img {
+  opacity: 1;
+}
+
 /*-------song container (right section)-------*/
 .app-container .song-container {
   width: 100%;
