@@ -339,7 +339,24 @@ Responsive
     padding-inline: 0.5rem;
   }
 
+  aside #playlist .bottom a .text {
+    display: none;
+  }
+
+  aside #playlist .bottom a img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
   aside #page-container .page:not(:first-child) {
     padding-inline: 0.5rem;
+  }
+
+  aside #page-container .page li {
+    padding-inline: 0.3125rem;
+  }
+
+  aside #page-container .page li:has(a.active) {
+    padding-inline: calc(0.3125rem - 0.1875rem);
   }
 }
