@@ -98,6 +98,7 @@ aside #playlist .top {
 }
 
 aside #playlist .top h2 {
+  font-size: 1rem;
   text-transform: uppercase;
   font-size: 1.125rem;
   color: #fff;
@@ -130,6 +131,7 @@ aside #playlist .top button#create-playlist:hover span:not(.text-button) {
 }
 
 aside #playlist .top button#create-playlist span.text-button {
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.5);
   margin-left: 0.3125rem;
   transition: color 200ms ease-in-out;
@@ -149,6 +151,7 @@ aside #playlist .top .list-container ul li {
   padding-block: 0.625rem;
 }
 aside #playlist .top .list-container ul li a {
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -208,6 +211,7 @@ aside #playlist .bottom .profile .img-wrapper img {
 }
 
 aside #playlist .bottom .profile h3 {
+  font-size: 1rem;
   color: #fff;
 }
 aside #playlist .bottom .profile > * {
@@ -287,6 +291,8 @@ main header {
 }
 
 .content-container h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
   color: #fff;
   margin-bottom: 0.9375rem;
 }
