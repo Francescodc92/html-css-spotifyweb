@@ -28,13 +28,13 @@
 } */
 
 /*-------section right--------*/
-.debug .app-container .song-container > * {
+/* .debug .app-container .song-container > * {
   border: 1px solid blue;
 }
 
 .debug .app-container .song-container header {
   border: 1px solid blue;
-}
+} */
 /* .debug .app-container .song-container main {
   border: 1px solid blue;
   background-color: burlywood;
@@ -46,10 +46,10 @@
 }
 
 /*-------card song--------*/
-.debug .my-row {
+/* .debug .my-row {
   border: 1px solid black;
 }
 
 .debug .my-row .col-1-6 {
   border: 1px solid green;
-}
+} */
