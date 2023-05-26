@@ -59,6 +59,19 @@ aside #page-container .page li:hover a {
   color: #fff;
 }
 
+aside #page-container .page li a.active {
+  color: #fff;
+}
+
+aside #page-container .page li:has(a.active) {
+  border-left: 0.1875rem solid #adff2f;
+  padding-inline: calc(1.25rem - 0.1875rem);
+}
+
+aside #page-container .page li a.active img {
+  opacity: 1;
+}
+
 aside #page-container .page li:hover a img {
   opacity: 1;
 }
@@ -204,7 +217,7 @@ aside #playlist .bottom .profile > * {
 Song container (section right)
 ---------*/
 .song-container header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   display: flex;
@@ -212,11 +225,31 @@ Song container (section right)
   justify-content: flex-end;
 }
 
+.song-container header a {
+  font-size: 0.875rem;
+  padding: 0.625rem 0.9375rem;
+  line-height: 1.25rem;
+  border-radius: 1.25rem;
+  color: #fff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  transition: transform 200ms ease-in-out;
+}
+
+.song-container header a:hover {
+  transform: scale(1.1);
+}
+
 /*---navigation main----*/
 .content-container,
 main header {
   padding: 0.9375rem;
 }
+.song-container {
+  background-color: var(--gb-music-section);
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .song-container .nav-main ul {
   display: flex;
   justify-content: center;
@@ -227,8 +260,24 @@ main header {
   margin-left: 1rem;
 }
 .song-container .nav-main ul li a {
+  font-size: 0.875rem;
   padding: 0.625rem 0.9375rem;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 200ms ease-in-out;
+}
+
+.song-container .nav-main ul li:hover a {
+  color: #fff;
+}
+
+.song-container .nav-main ul li.nav-active::after {
+  content: "";
+  width: 1.875rem;
+  height: 0.125rem;
+  background-color: #adff2f;
+  display: block;
+  margin-inline: auto;
 }
 /*---sogn list----*/
 .song-list > * {

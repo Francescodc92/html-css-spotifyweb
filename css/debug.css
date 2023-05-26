@@ -1,6 +1,6 @@
-.debug .app-container {
+/* .debug .app-container {
   color: green;
-}
+} */
 
 /* .debug .app-container > * {
   border: 1px solid red;
@@ -35,10 +35,10 @@
 .debug .app-container .song-container header {
   border: 1px solid blue;
 }
-.debug .app-container .song-container main {
+/* .debug .app-container .song-container main {
   border: 1px solid blue;
   background-color: burlywood;
-}
+} */
 
 .debug footer {
   color: blue;
