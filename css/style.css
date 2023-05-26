@@ -60,16 +60,16 @@ aside #page-container .page li:hover a {
   color: #fff;
 }
 
-aside #page-container .page li a.active {
+aside #page-container .page li.active a {
   color: #fff;
 }
 
-aside #page-container .page li:has(a.active) {
+aside #page-container .page li.active {
   border-left: 0.1875rem solid #adff2f;
   padding-inline: calc(1.25rem - 0.1875rem);
 }
 
-aside #page-container .page li a.active img {
+aside #page-container .page li.active a img {
   opacity: 1;
 }
 
@@ -486,7 +486,7 @@ Responsive
     padding-inline: 0.3125rem;
   }
 
-  aside #page-container .page li:has(a.active) {
+  aside #page-container .page li.active a {
     padding-inline: calc(0.3125rem - 0.1875rem);
   }
 }
