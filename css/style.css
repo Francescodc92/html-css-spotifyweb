@@ -380,10 +380,6 @@ footer {
   background-color: #282828;
 }
 
-footer.controllers {
-  min-width: 34.375rem;
-}
-
 footer.controllers .actual-song,
 footer.controllers .actual-song .song-info,
 footer.controllers .buttons-wrapper-right {
@@ -439,7 +435,6 @@ footer .song-info .autor-container span.subtitle:hover {
 }
 
 footer .song-options {
-  width: 20%;
   display: flex;
   align-items: center;
 }
@@ -448,6 +443,7 @@ footer .song-options a {
   padding: 0.3125rem;
 }
 footer .song-options i {
+  display: inline-block;
   font-size: 1.25rem;
   cursor: pointer;
   transition: color 200ms ease-in-out;
@@ -480,7 +476,6 @@ footer .player-wrapper .buttons-wrapper button i {
 }
 
 footer .player-wrapper .buttons-wrapper button#play {
-  transition: transform 200ms ease-in-out;
   padding: 0;
 }
 
@@ -497,7 +492,7 @@ footer.controllers .buttons-wrapper-right:first-child {
 }
 
 footer.controllers .buttons-wrapper-right:last-child .audio-wrapper {
-  margin-left: 0.625rem;
+  padding-left: 0.625rem;
 }
 
 footer .progress-bar-container {
@@ -577,6 +572,7 @@ footer.controllers .buttons-wrapper-right .buttons button {
 footer.controllers .buttons-wrapper-right i {
   color: rgba(255, 255, 255, 0.5);
   transition: color 200ms ease-in-out;
+  font-size: 1.125rem;
 }
 
 footer.controllers .buttons-wrapper-right .buttons button:hover i {
@@ -593,7 +589,6 @@ footer.controllers .buttons-wrapper-right .audio-wrapper {
   width: 100%;
   align-items: center;
   max-width: 6.25rem;
-  min-width: 6.25rem;
 }
 
 footer.controllers .buttons-wrapper-right .audio-wrapper:hover i {
@@ -612,10 +607,6 @@ Responsive
     width: calc((100% / 4) - (var(--margin-col) * 2));
     margin-inline: var(--margin-col);
   }
-
-  footer .song-options {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -627,22 +618,16 @@ Responsive
   Footer
   --------------*/
   footer.controllers .actual-song .song-info {
-    align-items: center;
+    flex-direction: column;
+  }
+
+  footer .song-info .autor-container {
+    margin-left: 0;
   }
 
   footer.controllers .actual-song .song-info h3.song-name {
     font-size: 1rem;
-  }
-
-  footer.controllers .actual-song .song-options a i {
-    font-size: 1rem;
-  }
-
-  footer .player-wrapper .buttons-wrapper button {
-    font-size: 0.875rem;
-    padding: 0.625rem;
-    margin: 0 0.3125rem;
-    cursor: pointer;
+    margin-top: 0.3125rem;
   }
 
   footer .img-wrapper {
@@ -652,12 +637,10 @@ Responsive
     align-items: center;
   }
 
-  footer.controllers .buttons-wrapper-right .buttons > * {
-    display: block;
-  }
-
   footer.controllers .buttons-wrapper-right .buttons {
-    min-width: 0;
+    display: flex;
+    justify-content: center;
+    padding-block: 0.3125rem;
   }
 }
 
@@ -745,5 +728,40 @@ Responsive
 
   aside #page-container .page li.active {
     padding-inline: calc(0.3125rem - 0.1875rem);
+  }
+
+  footer.controllers .buttons-wrapper-right .buttons {
+    margin-left: 1.25rem;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper {
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100px;
+    width: fit-content;
+    margin-left: 0;
+    padding-block: 0.3125rem;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper .progress-bar {
+    width: 0.3125rem;
+    order: 1;
+    height: 1.875rem;
+    margin-bottom: 0.3125rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  footer.controllers
+    .buttons-wrapper-right
+    .audio-wrapper
+    .progress-bar
+    .current-bar {
+    width: 0.3125rem;
+    height: 20%;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper i {
+    order: 2;
   }
 }
