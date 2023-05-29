@@ -4,7 +4,7 @@
 
 > Esercizio Spotify Web
 
-## Riproduzione di una pagina di un vero sito in modalità responsive.
+## Riproduzione di una pagina di una vera web app.
 
 - Descrizione
 
