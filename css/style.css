@@ -1,11 +1,8 @@
 @import url(./reset.css);
 @import url(./general.css);
-@import url(./debug.css);
 /*----------
 aside
 -----------*/
-
-/*--- section page container ----*/
 .app-container aside {
   background-color: black;
   color: #6a6d72;
@@ -14,6 +11,10 @@ aside
 .app-container aside a {
   color: #6a6d72;
 }
+
+/*-------------
+aside page container
+--------------*/
 
 aside #page-container {
   margin-bottom: 1.25rem;
@@ -84,7 +85,9 @@ aside #page-container .page li a img {
   transition: opacity 200ms ease-in-out;
 }
 
-/*--- section page container ----*/
+/*-------------
+aside playlist
+--------------*/
 
 aside #playlist {
   flex-grow: 1;
@@ -115,6 +118,7 @@ aside #playlist .top button#create-playlist {
   margin-block: 0.625rem;
   text-transform: capitalize;
   cursor: pointer;
+  align-self: start;
 }
 
 aside #playlist .top button#create-playlist span:not(.text-button) {
@@ -142,6 +146,8 @@ aside #playlist .top button#create-playlist span.text-button {
   transition: color 200ms ease-in-out;
 }
 
+/*-----list container------*/
+
 aside #playlist .top .list-container {
   overflow-y: auto;
 }
@@ -164,6 +170,8 @@ aside #playlist .top .list-container ul li a {
 aside #playlist .top .list-container ul li:hover a {
   color: #fff;
 }
+
+/*-------playlist bottom--------*/
 
 aside #playlist .bottom {
   padding-inline: 1.25rem;
@@ -190,6 +198,8 @@ aside #playlist .bottom a img {
 aside #playlist .bottom a:hover img {
   opacity: 1;
 }
+
+/*-----profile-----*/
 
 aside #playlist .bottom .profile {
   padding-block: 0.625rem;
@@ -224,6 +234,12 @@ aside #playlist .bottom .profile > * {
 /*----------
 Song container (section right)
 ---------*/
+
+.content-container,
+main header {
+  padding: 0.9375rem;
+}
+
 .song-container header {
   background-color: rgba(0, 0, 0, 0.6);
   position: sticky;
@@ -249,11 +265,7 @@ Song container (section right)
   transform: scale(1.1);
 }
 
-/*---navigation main----*/
-.content-container,
-main header {
-  padding: 0.9375rem;
-}
+/*---navigation main links----*/
 .song-container {
   background-color: var(--gb-music-section);
   color: rgba(255, 255, 255, 0.5);
@@ -288,6 +300,7 @@ main header {
   display: block;
   margin-inline: auto;
 }
+
 /*---sogn list----*/
 .song-list > * {
   margin-bottom: 1.25rem;
@@ -305,6 +318,7 @@ main header {
   display: inline-block;
 }
 
+/*-------song cards----------*/
 .content-container .card-song {
   text-align: center;
   height: 100%;
@@ -379,6 +393,11 @@ footer {
   background-color: #282828;
 }
 
+footer a,
+footer span {
+  color: #6a6d72;
+}
+
 footer.controllers .actual-song,
 footer.controllers .actual-song .song-info,
 footer.controllers .buttons-wrapper-right {
@@ -390,20 +409,17 @@ footer.controllers .buttons-wrapper-right {
   justify-content: flex-end;
 }
 
-footer .img-wrapper {
+footer .actual-song .song-info .img-wrapper {
   width: 5rem;
   height: 3.75rem;
 }
 
-footer .img-wrapper img {
+footer .actual-song .song-info .img-wrapper img {
   width: 100%;
   height: 100%;
 }
 
-footer a,
-footer span {
-  color: #6a6d72;
-}
+/*---------song info autor----------*/
 
 footer .song-info .autor-container {
   margin-left: 0.9375rem;
@@ -433,6 +449,10 @@ footer .song-info .autor-container span.subtitle:hover {
   color: #fff;
 }
 
+/*-----------
+song options
+------------*/
+
 footer .song-options {
   display: flex;
   align-items: center;
@@ -451,6 +471,10 @@ footer .song-options i {
 footer .song-options a:hover i {
   color: #fff;
 }
+
+/*-----------
+player wrapper 
+------------*/
 
 footer .player-wrapper {
   width: 50%;
@@ -487,27 +511,9 @@ footer .player-wrapper .buttons-wrapper button#play:hover {
   transform: scale(1.2);
 }
 
-footer.controllers .buttons-wrapper-right:first-child {
-  margin-right: 0.625rem;
-}
-
-footer.controllers .buttons-wrapper-right:last-child .audio-wrapper {
-  padding-left: 0.625rem;
-}
-
-footer .progress-bar-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 0.625rem;
-}
-
-footer .progress-bar-container .current-time,
-footer .progress-bar-container .total-time {
-  font-size: 0.875rem;
-  color: #fff;
-  font-weight: 700;
-}
+/*----------------
+progress bar ( audio e song progress)
+------------------*/
 
 footer .progress-bar-container .progress-bar,
 footer .buttons-wrapper-right .audio-wrapper .progress-bar {
@@ -557,8 +563,34 @@ footer .buttons-wrapper-right .progress-bar .current-bar {
   background-color: #c1c1c1;
 }
 
+/*-----------
+buttons wright audio 
+------------*/
+
+footer.controllers .buttons-wrapper-right:first-child {
+  margin-right: 0.625rem;
+}
+
+footer.controllers .buttons-wrapper-right:last-child .audio-wrapper {
+  padding-left: 0.625rem;
+}
+
+footer .progress-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.625rem;
+}
+
+footer .progress-bar-container .current-time,
+footer .progress-bar-container .total-time {
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+}
+
 footer.controllers .buttons-wrapper-right .buttons {
-  min-width: 3.75rem;
+  min-width: 4.375rem;
 }
 
 footer.controllers .buttons-wrapper-right .buttons button {
@@ -593,182 +625,4 @@ footer.controllers .buttons-wrapper-right .audio-wrapper:hover i {
 
 footer.controllers .buttons-wrapper-right .audio-wrapper > * {
   cursor: pointer;
-}
-
-/*-----------
-Responsive
-------------*/
-@media screen and (max-width: 1100px) {
-  .col-1-4 {
-    width: calc((100% / 4) - (var(--margin-col) * 2));
-    margin-inline: var(--margin-col);
-  }
-
-  footer.controllers .buttons-wrapper-right {
-    width: 25%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .col-1-2 {
-    width: calc((100% / 2) - (var(--margin-col) * 2));
-    margin-inline: var(--margin-col);
-  }
-  /*------------
-  Footer
-  --------------*/
-  footer.controllers .actual-song .song-info {
-    flex-direction: column;
-  }
-
-  footer .song-info .autor-container {
-    margin-left: 0;
-  }
-
-  footer.controllers .actual-song .song-info h3.song-name {
-    font-size: 1rem;
-    margin-top: 0.3125rem;
-  }
-
-  footer .img-wrapper {
-    width: 3.125rem;
-    height: 1.875rem;
-    display: flex;
-    align-items: center;
-  }
-
-  footer.controllers .buttons-wrapper-right .buttons {
-    display: flex;
-    justify-content: center;
-    padding-block: 0.3125rem;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper {
-    flex-direction: column;
-    height: 100px;
-    margin-inline: 1.25rem;
-    padding-block: 0.3125rem;
-    width: initial;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper .progress-bar {
-    width: 0.3125rem;
-    order: 1;
-    height: 1.875rem;
-    margin-bottom: 0.3125rem;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  footer.controllers
-    .buttons-wrapper-right
-    .audio-wrapper
-    .progress-bar
-    .current-bar {
-    width: 0.3125rem;
-    height: 20%;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper i {
-    order: 2;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .app-container aside {
-    width: 20%;
-    height: 100%;
-    min-width: none;
-    display: flex;
-    flex-direction: column;
-  }
-  .app-container aside {
-    width: 10%;
-    height: 100%;
-    min-width: 3.125rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  aside #page-container .logo img:not(#small) {
-    display: none;
-  }
-
-  aside #page-container .logo {
-    margin-left: 0;
-  }
-
-  aside #page-container .logo a {
-    margin-inline: auto;
-  }
-
-  aside #page-container .logo a.img-small {
-    height: 100%;
-    display: block;
-    line-height: var(--header-height);
-    text-align: center;
-  }
-
-  aside #page-container .logo img#small {
-    height: 1.875rem;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  aside #page-container .page li a .text {
-    display: none;
-  }
-
-  aside #playlist .top {
-    display: none;
-  }
-
-  aside #playlist .bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-  }
-
-  aside #playlist .bottom .profile #profile-name {
-    display: none;
-  }
-
-  aside #playlist .top,
-  aside #playlist .bottom {
-    padding-inline: 0.5rem;
-  }
-
-  aside #playlist .bottom a .text {
-    display: none;
-  }
-
-  aside #playlist .bottom a img {
-    width: 1.875rem;
-    height: 1.875rem;
-  }
-
-  aside #page-container .page:not(:first-child) {
-    padding-inline: 0.5rem;
-  }
-
-  aside #page-container .page li {
-    padding-inline: 0.3125rem;
-  }
-
-  aside #page-container .page li.active {
-    padding-inline: calc(0.3125rem - 0.1875rem);
-  }
-
-  aside #playlist .bottom .profile .img-wrapper {
-    margin-inline: auto;
-  }
-
-  footer.controllers .buttons-wrapper-right .buttons {
-    margin-left: 1.25rem;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper {
-    display: none;
-  }
 }
