@@ -527,6 +527,9 @@ footer .progress-bar-container .progress-bar .current-bar,
 footer .buttons-wrapper-right .audio-wrapper .progress-bar .current-bar {
   position: relative;
   border-radius: 0.125rem;
+  width: 20%;
+  height: 100%;
+  background-color: #c1c1c1;
 }
 
 footer .progress-bar-container .progress-bar .current-bar::after,
@@ -553,13 +556,6 @@ footer
   .audio-wrapper:hover
   .progress-bar
   .current-bar::after {
-  background-color: #c1c1c1;
-}
-
-footer .progress-bar-container .progress-bar .current-bar,
-footer .buttons-wrapper-right .progress-bar .current-bar {
-  width: 20%;
-  height: 100%;
   background-color: #c1c1c1;
 }
 
