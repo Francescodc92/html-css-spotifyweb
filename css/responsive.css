@@ -48,6 +48,10 @@ Responsive
   audio controllers
   -------------*/
 
+  footer.controllers .buttons-wrapper-right {
+    width: auto;
+  }
+
   footer.controllers .buttons-wrapper-right .buttons {
     display: flex;
     justify-content: center;
@@ -181,8 +185,20 @@ Responsive
   audio section
   -----------*/
 
+  footer .song-options {
+    flex-direction: column;
+  }
+
   footer.controllers .buttons-wrapper-right .buttons {
-    margin-left: 1.25rem;
+    flex-direction: column;
+  }
+
+  footer.controllers .buttons-wrapper-right .buttons {
+    min-width: 0;
+  }
+
+  footer.controllers .buttons-wrapper-right .buttons button:not(:last-child) {
+    margin-bottom: 0.9375rem;
   }
 
   footer.controllers .buttons-wrapper-right .audio-wrapper {
