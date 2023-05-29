@@ -64,10 +64,6 @@ aside #page-container .page li:hover a {
   color: #fff;
 }
 
-aside #page-container .page li.active a {
-  color: #fff;
-}
-
 aside #page-container .page li.active {
   border-left: 0.1875rem solid #adff2f;
   padding-inline: calc(1.25rem - 0.1875rem);
@@ -95,10 +91,15 @@ aside #playlist {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 aside #playlist .top {
   padding-inline: 1.25rem;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 aside #playlist .top h2 {
@@ -142,8 +143,6 @@ aside #playlist .top button#create-playlist span.text-button {
 }
 
 aside #playlist .top .list-container {
-  height: 200px;
-  max-height: 30vh;
   overflow-y: auto;
 }
 
@@ -152,12 +151,12 @@ aside #playlist .top .list-container ul {
 }
 
 aside #playlist .top .list-container ul li {
-  padding-block: 0.625rem;
+  padding-block: 0.3125rem;
 }
 aside #playlist .top .list-container ul li a {
   font-size: 0.875rem;
-  line-height: 1.25rem;
   font-weight: 700;
+  padding-block: 0.625rem;
   text-transform: capitalize;
   transition: color 200ms ease-in-out;
 }
@@ -477,6 +476,7 @@ footer .player-wrapper .buttons-wrapper button i {
 
 footer .player-wrapper .buttons-wrapper button#play {
   padding: 0;
+  transition: transform 200ms ease-in-out;
 }
 
 footer .player-wrapper .buttons-wrapper button#play i {
@@ -557,10 +557,6 @@ footer .buttons-wrapper-right .progress-bar .current-bar {
   background-color: #c1c1c1;
 }
 
-footer.controllers .buttons-wrapper-right {
-  width: 25%;
-}
-
 footer.controllers .buttons-wrapper-right .buttons {
   min-width: 3.75rem;
 }
@@ -607,6 +603,10 @@ Responsive
     width: calc((100% / 4) - (var(--margin-col) * 2));
     margin-inline: var(--margin-col);
   }
+
+  footer.controllers .buttons-wrapper-right {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -641,6 +641,36 @@ Responsive
     display: flex;
     justify-content: center;
     padding-block: 0.3125rem;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper {
+    flex-direction: column;
+    height: 100px;
+    margin-inline: 1.25rem;
+    padding-block: 0.3125rem;
+    width: initial;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper .progress-bar {
+    width: 0.3125rem;
+    order: 1;
+    height: 1.875rem;
+    margin-bottom: 0.3125rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  footer.controllers
+    .buttons-wrapper-right
+    .audio-wrapper
+    .progress-bar
+    .current-bar {
+    width: 0.3125rem;
+    height: 20%;
+  }
+
+  footer.controllers .buttons-wrapper-right .audio-wrapper i {
+    order: 2;
   }
 }
 
@@ -730,38 +760,15 @@ Responsive
     padding-inline: calc(0.3125rem - 0.1875rem);
   }
 
+  aside #playlist .bottom .profile .img-wrapper {
+    margin-inline: auto;
+  }
+
   footer.controllers .buttons-wrapper-right .buttons {
     margin-left: 1.25rem;
   }
 
   footer.controllers .buttons-wrapper-right .audio-wrapper {
-    flex-direction: column;
-    flex-grow: 1;
-    height: 100px;
-    width: fit-content;
-    margin-left: 0;
-    padding-block: 0.3125rem;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper .progress-bar {
-    width: 0.3125rem;
-    order: 1;
-    height: 1.875rem;
-    margin-bottom: 0.3125rem;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  footer.controllers
-    .buttons-wrapper-right
-    .audio-wrapper
-    .progress-bar
-    .current-bar {
-    width: 0.3125rem;
-    height: 20%;
-  }
-
-  footer.controllers .buttons-wrapper-right .audio-wrapper i {
-    order: 2;
+    display: none;
   }
 }
